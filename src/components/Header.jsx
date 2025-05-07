@@ -46,7 +46,7 @@ const MobileMenu = styled.div`
   a {
     color: ${({ theme }) => theme.colors.text};
     text-decoration: none;
-    padding: 0.5rem 0;
+    padding: 1.5rem 0;
     font-size: 1.2rem;
     &:hover {
       color: ${({ theme }) => theme.colors.accent};
