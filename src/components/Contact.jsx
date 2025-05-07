@@ -119,10 +119,10 @@ function Contact() {
 
     emailjs
       .sendForm(
-        'service_wixbt1q', // Your SERVICE_ID
-        'template_gn0zt5g', // Your TEMPLATE_ID
+        'service_wixbt1q', 
+        'template_gn0zt5g', 
         form.current,
-        'o83y8yMpC3qQD8OjL' // Your PUBLIC_KEY
+        'o83y8yMpC3qQD8OjL' 
       )
       .then(
         () => {

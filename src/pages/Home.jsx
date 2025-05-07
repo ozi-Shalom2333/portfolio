@@ -2,7 +2,7 @@ import { Helmet } from 'react-helmet';
 import { lazy, Suspense } from 'react';
 import Hero from '../components/Hero';
 
-// Lazy-load heavy components
+
 const About = lazy(() => import('../components/About'));
 const Projects = lazy(() => import('../components/Projects'));
 const Skills = lazy(() => import('../components/Skills'));

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { theme } from '../styles/Theme';
 
 const Nav = styled.nav`
   display: flex;
@@ -8,7 +9,7 @@ const Nav = styled.nav`
   align-items: center;
   padding: 1rem 2rem;
   background: ${({ theme }) => theme.colors.primary};
-  color: white;
+  color: ${({ theme }) => theme.colors.text};
 `;
 
 const NavLinks = styled.div`
@@ -23,9 +24,10 @@ const Hamburger = styled.button`
   display: none;
   background: none;
   border: none;
-  color: white;
+  color: ${({ theme }) => theme.colors.text};
   font-size: 1.5rem;
   cursor: pointer;
+  z-index: 10;
   @media (max-width: 768px) {
     display: block;
   }
@@ -40,6 +42,16 @@ const MobileMenu = styled.div`
   width: 100%;
   background: ${({ theme }) => theme.colors.primary};
   padding: 1rem;
+  z-index: 9;
+  a {
+    color: ${({ theme }) => theme.colors.text};
+    text-decoration: none;
+    padding: 0.5rem 0;
+    font-size: 1.2rem;
+    &:hover {
+      color: ${({ theme }) => theme.colors.accent};
+    }
+  }
 `;
 
 function Header() {
@@ -47,25 +59,28 @@ function Header() {
 
   return (
     <Nav role="navigation" aria-label="Main navigation">
-      <Link to="/" style={{ color: 'white', textDecoration: 'none' }}>
+      <Link to="/" style={{ color: theme.colors.text, textDecoration: 'none' }}>
         <h1>My Portfolio</h1>
       </Link>
       <NavLinks>
-        <Link to="/" style={{ color: 'white', textDecoration: 'none' }}>
+        <Link to="/" style={{ color: theme.colors.text, textDecoration: 'none' }}>
           Home
         </Link>
-        <a href="#about" style={{ color: 'white', textDecoration: 'none' }}>
+        <a href="#about" style={{ color: theme.colors.text, textDecoration: 'none' }}>
           About
         </a>
-        <a href="#projects" style={{ color: 'white', textDecoration: 'none' }}>
+        <a href="#projects" style={{ color: theme.colors.text, textDecoration: 'none' }}>
           Projects
         </a>
-        <a href="#contact" style={{ color: 'white', textDecoration: 'none' }}>
+        <a href="#contact" style={{ color: theme.colors.text, textDecoration: 'none' }}>
           Contact
         </a>
       </NavLinks>
       <Hamburger
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={() => {
+          console.log('Hamburger clicked, isOpen:', !isOpen);
+          setIsOpen(!isOpen);
+        }}
         aria-expanded={isOpen}
         aria-label="Toggle menu"
       >

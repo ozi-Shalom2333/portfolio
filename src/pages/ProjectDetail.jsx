@@ -6,6 +6,7 @@ import projects from '../data/projects';
 const DetailSection = styled.section`
   padding: 4rem 2rem;
   text-align: center;
+  color: #1c2526;
 `;
 
 function ProjectDetail() {
@@ -19,7 +20,7 @@ function ProjectDetail() {
   return (
     <DetailSection>
       <Helmet>
-        <title>{project.title} - [Your Name] Portfolio</title>
+        <title>{project.title} - Ozioma Portfolio</title>
         <meta name="description" content={project.description} />
       </Helmet>
       <h2>{project.title}</h2>
