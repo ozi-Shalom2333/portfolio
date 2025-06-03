@@ -35,6 +35,24 @@ const projects = [
     githubLink: 'https://github.com/ozi-Shalom2333/voteApp',
     tech: ['Html', 'CSS', 'React'],
   },
+   {
+    id: 5,
+    title: 'Digital Clock',
+    description: 'A stylish digital clock with time, date, light/dark themes, animations, and optional ticking sound, built using HTML, CSS, and JavaScript.',
+    image: 'public/assets/clockdark.jpg',
+    liveLink: 'https://digitalclock-sepia-six.vercel.app/',
+    githubLink: 'https://github.com/ozi-Shalom2333/digitalclock',
+    tech: ['Html', 'CSS', 'JavaScript'],
+  },
+   {
+    id: 6,
+    title: 'Modern form Validation',
+    description: 'A modern, responsive sign-up form with light/dark theme toggle, client-side validation, password visibility, and glassmorphism-inspired design.',
+    image: '/assets/formlight.jpg',
+    liveLink: 'https://formvalidation-sigma-seven.vercel.app/',
+    githubLink: 'https://github.com/ozi-Shalom2333/formvalidation',
+    tech: ['Html', 'CSS', 'JavaScript'],
+  },
 ];
 
 export default projects;
