@@ -1,28 +1,34 @@
+// Hero.jsx
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
+// Styled Hero Section
 const HeroSection = styled.section`
   height: 100vh;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: linear-gradient(135deg, ${({ theme }) => theme.colors.primary}, ${({ theme }) => theme.colors.secondary}); // Black to dark grey gradient
-  color: ${({ theme }) => theme.colors.text}; // Light grey/white text
   padding: 2rem;
-  position: relative;
+  color: ${({ theme }) => theme.colors.text};
+  background: url('/assets/profile.png') center/cover no-repeat;
   overflow: hidden;
 
-  // Subtle overlay for depth
+  
   &::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.1); // Slight dark overlay
+    width: 100%;
+    background: linear-gradient(
+      to bottom,
+      ${({ theme }) => theme.colors.primary + 'cc'},  
+      ${({ theme }) => theme.colors.secondary + 'cc'}
+    );
     z-index: 1;
   }
 
@@ -34,7 +40,7 @@ const HeroSection = styled.section`
   h1 {
     font-size: 3.5rem;
     font-weight: 700;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); // Subtle shadow for depth
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
   }
 
   p {
@@ -45,20 +51,23 @@ const HeroSection = styled.section`
   @media (max-width: 768px) {
     height: 80vh;
     padding: 1rem;
+
     h1 {
       font-size: 2rem;
     }
+
     p {
       font-size: 1rem;
     }
   }
 `;
 
+// Styled Button
 const Button = styled(motion.a)`
   margin-top: 1.5rem;
   padding: 0.75rem 1.5rem;
-  background: ${({ theme }) => theme.colors.accent}; // Muted grey-blue
-  color: ${({ theme }) => theme.colors.text}; // Light grey/white
+  background: ${({ theme }) => theme.colors.accent};
+  color: ${({ theme }) => theme.colors.text};
   text-decoration: none;
   border-radius: 5px;
   font-weight: 500;
@@ -66,15 +75,16 @@ const Button = styled(motion.a)`
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 
   &:hover {
-    background: ${({ theme }) => theme.colors.secondary}; // Dark grey on hover
-    transform: translateY(-2px); // Slight lift effect
+    background: ${({ theme }) => theme.colors.secondary};
+    transform: translateY(-2px);
   }
 
   &:active {
-    transform: translateY(0); // Reset on click
+    transform: translateY(0);
   }
 `;
 
+// Main Hero Component
 function Hero() {
   return (
     <HeroSection role="banner" aria-label="Hero section">

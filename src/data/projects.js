@@ -53,6 +53,24 @@ const projects = [
     githubLink: 'https://github.com/ozi-Shalom2333/formvalidation',
     tech: ['Html', 'CSS', 'JavaScript'],
   },
+  {
+    id: 7,
+    title: 'ZURI',
+    description: 'A modern fashion brand blending vibrant African prints with contemporary silhouettes. Ethically crafted, endlessly elegant.',
+    image: '/assets/zuri-first-attempt.jpg',
+    liveLink: 'https://zuri-dun.vercel.app/',
+    githubLink: 'https://github.com/ozi-Shalom2333/ZURI',
+    tech: ['Html', 'CSS', 'JavaScript'],
+  },
+  {
+    id: 8,
+    title: 'Zuri Second Attempt',
+    description: 'A modern fashion brand blending vibrant African prints with contemporary silhouettes. Ethically crafted, endlessly elegant.',
+    image: '/assets/zuri-second-attempt.jpg',
+    liveLink: 'https://zuri-fashion-website.vercel.app/',
+    githubLink: 'https://github.com/ozi-Shalom2333/ZURI-fashion-website',
+    tech: ['Html', 'CSS', 'JavaScript'],
+  },
 ];
 
 export default projects;
